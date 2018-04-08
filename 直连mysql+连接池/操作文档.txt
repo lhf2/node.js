@@ -1,0 +1,10 @@
+安装mysql server
+配置path路径：C:\Program Files\MySQL\MySQL Server 5.7\bin
+进入mysql命令行：使用命令  mysql -uroot -proot(-u后面的是用户名 -p后面的是密码);
+                1、显示当前数据库服务器中的数据库列表：
+                mysql> SHOW DATABASES;
+                2、建立数据库：
+                mysql> CREATE DATABASE 库名;
+                3、建立数据表：
+                mysql> USE 库名;
+                mysql> CREATE TABLE 表名 (字段名 VARCHAR(20), 字段名 CHAR(1));（比如：create table `user`(`uid` int not null primary key auto_increment,`uname` varchar(100) not null,`pwd` varchar(100) not null)ENGINE=InnoDB DEFAULT CHARSET=utf8）
