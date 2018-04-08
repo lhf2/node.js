@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+{}
+<form action="" method="post">
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td>
+                <input type="text" name="email" id="email" placeholder="请输入用户名">
+            </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td>
+                <input type="password" name="pwd" id="pwd" placeholder="请输入密码">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="zhuce">注册</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    //用ajax提交表单
+    $("#login").click(function(){
+        $.post("/zhuce",{
+            "uname" : $("#email").val(),
+            "pwd" : $("#pwd").val()
+        },function(result){
+            console.log(result);
+        })
+    });
+</script>
+</body>
