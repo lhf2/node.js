@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟另一个客户端</title>
+</head>
+<body>
+<input type="text" id="txt1" placeholder="请输入消息">
+</body>
+<script>
+    var socket = new WebSocket('ws://192.168.10.134:3001');
+    socket.onopen = function(){
+        console.log('connet to server')
+    }
+    socket.onmessage = function(ev){
+        console.log(ev.data);
+    }
+    var txt1 = document.getElementById('txt1')
+    txt1.onchange = function(){
+        socket.send(this.value);
+    }
+</script>
+</html>
