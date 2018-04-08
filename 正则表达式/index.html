@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    window.onload = function(){
+        //替换
+        /*var  str  =  "hfdjskahfjaskdHelloFjksahjkfsdyweiurwbrewnHellobxzmbz";
+        //var  re  =  /hello/;  //区分大小写
+        //var  re  =  /hello/i;  //不区分大小写
+        var  re  =  /hello/ig;//不区分大小写,同时替换所有
+        alert(re.test(str));    //true表包含
+        alert(str.replace(re,"费劲"));*/
+        /*?  匹配表达式0次或者1次
+        +  表达式至少出现1次，相当于  {1,}
+        *  表达式不出现或出现任意次，相当于  {0,}*/
+        var  str1  =  "hfdjskahf{jas}kdhfjksahjkfsdy{wei}urwbFjrewnbxzmbz";
+        var  re1 =  /{(.*?)}/g;//*表匹配前面的子表达式零次或多次,?表匹配前面的子表达式零次或一次
+        alert(re1.test(str1));    //true表包含
+        alert(str1.replace(re1,"费劲"));
+    }
+</script>
+</body>
+</html>
